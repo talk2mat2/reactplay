@@ -4,11 +4,12 @@ import Main from  './components/body'
 import Footer from './components/footer'
 import Data from "./data"
 import Login from "./components/login"
+import Apicall from "./components/apicall"
 
 import Checkbox from './components/checkbox'
 
 import './app.css'
-import data from './data';
+import Userform from "./components/form"
 // import checkbox from './components/checkbox';
 
 
@@ -53,12 +54,13 @@ class tesApp extends Component {
         const Checkboxdata= this.state.Data.map(values=><Checkbox Elements={values} key={values.id} id={values.id} handleClick={this.handleClick} /> )
         return ( <div className="wrapper">
             <Header />
+            <Userform />
             <Login />
         <div>total number of users is :{listData.length} {this.state.name}</div>
             
           {this.state.loading===true?<h2>Loading data from server.......</h2>:<div>{Checkboxdata}</div> }
           {listData} 
-            
+            <Apicall />
           
             <Footer />
         </div> );

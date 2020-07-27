@@ -13,7 +13,7 @@ class Login extends Component {
 
     }
     render() { 
-    return ( <div><button onClick={()=>{this.userLogger()}}>{this.state.isLoggedIn?<p>log out</p>:<p>login</p>}</button><p>you are currently logged {this.state.isLoggedIn?<p>in</p>:<p>off</p>}</p></div> );
+    return ( <div><button onClick={()=>{this.userLogger()}}>{this.state.isLoggedIn?<p>log out</p>:<p>login</p>}</button><p>you are currently logged {this.state.isLoggedIn?'in':'off'}</p></div> );
     }
 }
  
